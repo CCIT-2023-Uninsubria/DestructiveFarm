@@ -14,7 +14,7 @@ CONFIG = {
 
     'SYSTEM_PROTOCOL': 'ccit_http',
     'SYSTEM_URL': 'http://10.10.0.1:8080/flags',
-    'TEAM_TOKEN': os.getenv('TEAM_TOKEN'),
+    'TEAM_TOKEN': os.getenv('TEAM_TOKEN', 'default_token'),
 
     # The server will submit not more than SUBMIT_FLAG_LIMIT flags
     # every SUBMIT_PERIOD seconds. Flags received more than
@@ -25,7 +25,7 @@ CONFIG = {
 
     # Password for the web interface. You can use it with any login.
     # This value will be excluded from the config before sending it to farm clients.
-    'SERVER_PASSWORD': os.getenv('FARM_PASSWD'),
+    'SERVER_PASSWORD': os.getenv('FARM_PASSWD', '1234'),
 
     # Use authorization for API requests
     'ENABLE_API_AUTH': False,
