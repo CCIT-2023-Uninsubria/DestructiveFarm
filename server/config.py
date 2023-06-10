@@ -19,9 +19,9 @@ CONFIG = {
     # The server will submit not more than SUBMIT_FLAG_LIMIT flags
     # every SUBMIT_PERIOD seconds. Flags received more than
     # FLAG_LIFETIME seconds ago will be skipped.
-    'SUBMIT_FLAG_LIMIT': 15,
+    'SUBMIT_FLAG_LIMIT': 60,
     'SUBMIT_PERIOD': 120,
-    'FLAG_LIFETIME': 120,
+    'FLAG_LIFETIME': 120 * 5,
 
     # Password for the web interface. You can use it with any login.
     # This value will be excluded from the config before sending it to farm clients.
